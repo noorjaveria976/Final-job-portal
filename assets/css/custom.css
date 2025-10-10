@@ -1,0 +1,60 @@
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VzdG9tLmNzcyIsInNvdXJjZXMiOlsiY3VzdG9tLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9 */
+
+/*# sourceMappingURL=custom.css.map */
+
+/* Sidebar active state overrides */
+.main-sidebar .sidebar-menu li>a {
+    position: relative;
+}
+
+.main-sidebar .sidebar-menu li.active>a,
+.main-sidebar .sidebar-menu>li.active>a,
+body .main-sidebar .sidebar-menu li.active>a {
+    background-color: #f0f3ff !important;
+    color: #0c1139 !important;
+}
+
+.main-sidebar .sidebar-menu li.active>a i,
+.main-sidebar .sidebar-menu li.active>a span,
+.main-sidebar .sidebar-menu li.active>a .badge,
+.main-sidebar .sidebar-menu li a.active i,
+.main-sidebar .sidebar-menu li a.active span,
+.main-sidebar .sidebar-menu li a.active .badge {
+    color: #0e213e !important;
+}
+
+/* Left indicator bar for active items */
+.main-sidebar .sidebar-menu li.active>a::before,
+.main-sidebar .sidebar-menu li a.active::before,
+body .main-sidebar .sidebar-menu li.active>a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background-color: #ffffff !important;
+    color: #0e213e !important;
+
+    border-radius: 0 2px 2px 0;
+    opacity: 0.75;
+}
+
+/* Submenu link active (when inside dropdown) */
+.main-sidebar .sidebar-menu .dropdown-menu a.active,
+.main-sidebar .sidebar-menu .dropdown-menu li.active>a {
+    color: #0623f9 !important;
+    background-color: rgba(103, 119, 239, 0.12) !important;
+    font-weight: 600 !important;
+}
+
+/* Ensure hover doesn't override active */
+.main-sidebar .sidebar-menu li.active>a:hover,
+.main-sidebar .sidebar-menu .dropdown-menu a.active:hover {
+    color: inherit !important;
+}
+
+/* Guard against theme rules targeting .sidebar-menu li a that override colors */
+.main-sidebar .sidebar-menu li.active>a * {
+    color: #0e213e !important;
+}
