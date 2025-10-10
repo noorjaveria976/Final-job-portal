@@ -1,4 +1,4 @@
-<?php $pageTitle = "Edit Account "; ?>
+<?php $pageTitle = "Public Profile "; ?>
 
 <?php
 include('config.php');
