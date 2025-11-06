@@ -6,8 +6,8 @@ $currentPage = $_GET['page'] ?? 'dashboard';
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
             <a href="layout.php">
-                <img alt="image" src="assets/img/small_logo.png" class="header-logo" />
-                <span class="logo-name"><img class="header-logo" src="assets/img/ITSM LOGO new.png" alt=""></span>
+                <!-- <img alt="image" src="assets/img/small_logo.png" class="header-logo" /> -->
+                <span class="logo-name"><img class="header-logo" src="assets/img/logo.png" alt=""></span>
             </a>
         </div>
         <ul class="sidebar-menu">
@@ -71,14 +71,22 @@ $currentPage = $_GET['page'] ?? 'dashboard';
                     <a href="layout.php?page=dashboard" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
                 </li>
                 <!-- Admin ke dropdowns yahan same logic ke sath add karo -->
-                <li class="dropdown <?php echo in_array($currentPage, ['admin_Users', 'admin_addNewadmin']) ? 'active' : ''; ?>">
+                 <li class="dropdown <?php echo in_array($currentPage, ['adduser', 'updateuser', 'deleteuser']) ? 'active' : ''; ?>">
+                    <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i><span>User Management</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link <?php echo $currentPage == 'adduser' ? 'active' : ''; ?>" href="layout.php?page=adduser">Add User</a></li>
+                        <li><a class="nav-link <?php echo $currentPage == 'updateuser' ? 'active' : ''; ?>" href="layout.php?page=updateuser">Update</a></li>
+                        <li><a class="nav-link <?php echo $currentPage == 'deleteuser' ? 'active' : ''; ?>" href="layout.php?page=deleteuser">Delete</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="dropdown <?php echo in_array($currentPage, ['admin_Users', 'admin_addNewadmin']) ? 'active' : ''; ?>">
                     <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i><span>Admin Users </span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link <?php echo $currentPage == 'admin_Users' ? 'active' : ''; ?>" href="layout.php?page=admin_Users">List All Admin Users </a></li>
                         <li><a class="nav-link <?php echo $currentPage == 'admin_addNewadmin' ? 'active' : ''; ?>" href="layout.php?page=admin_addNewadmin">Add Admin Users</a></li>
 
                     </ul>
-                </li>
+                </li> -->
 
                 <li class="dropdown <?php echo in_array($currentPage, ['admin_manageJobs', 'admin_JobsForm']) ? 'active' : ''; ?>">
                     <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i><span>Jobs </span></a>
@@ -426,7 +434,8 @@ $currentPage = $_GET['page'] ?? 'dashboard';
 
 
             <!-- Seeker Section has done -->
-            <?php if ($userRole == 'computer_technician'): ?>
+           <?php if ($userRole == 'seeker'): ?>
+
                 <li class="<?php echo $currentPage == 'dashboard' ? 'active' : ''; ?>">
                     <a href="layout.php?page=dashboard" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
                 </li>

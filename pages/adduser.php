@@ -1,8 +1,52 @@
 <?php
+if (isset($_GET['delete_id'])) {
+    die("Delete ID received: " . $_GET['delete_id']);
+}
+?>
+
+
+<?php
 
 
 include('config.php');
+echo $conn->affected_rows;
 
+if (isset($_GET['delete_id'])) {
+    $id = intval($_GET['delete_id']);
+
+    // Check if user exists
+    $check = $conn->query("SELECT user_role FROM users WHERE user_id = $id");
+    if ($check->num_rows == 0) {
+        echo "<script>alert('User not found!'); window.history.back();</script>";
+        exit;
+    }
+
+    $user = $check->fetch_assoc();
+
+    // Protect last admin
+    if ($user['user_role'] == 'admin') {
+        $count = $conn->query("SELECT COUNT(*) AS total FROM users WHERE user_role='admin'");
+        $total = $count->fetch_assoc()['total'];
+
+        if ($total <= 1) {
+            echo "<script>alert('Last admin cannot be deleted!'); window.history.back();</script>";
+            exit;
+        }
+    }
+
+    // Delete user
+    $delete = $conn->query("DELETE FROM users WHERE user_id = $id");
+
+    if ($delete) {
+        echo "<script>alert('User deleted successfully'); window.location='layout.php?page=adduser';</script>";
+    } else {
+        echo "<script>alert('Deletion failed: " . $conn->error . "');</script>";
+    }
+    exit;
+}
+
+
+// actuall start
 if (isset($_POST['register-user'])) {
     $user_first_name = trim($_POST['user_first_name']);
     $user_last_name  = trim($_POST['user_last_name']);
@@ -23,7 +67,7 @@ if (isset($_POST['register-user'])) {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Check if email exists
-        $stmt = $cn->prepare("SELECT user_id FROM users WHERE user_email = ?");
+        $stmt = $conn->prepare("SELECT user_id FROM users WHERE user_email = ?");
         $stmt->bind_param("s", $user_email);
         $stmt->execute();
         $stmt->store_result();
@@ -32,11 +76,11 @@ if (isset($_POST['register-user'])) {
             echo "<script>alert('Email already registered');</script>";
         } else {
             // Insert new user
-            $stmt_insert = $cn->prepare("INSERT INTO users (user_first_name, user_last_name, user_email, user_phone, user_gender, user_dob, user_joining_date, user_role, password, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())");
-            $stmt_insert->bind_param("sssssssss", $user_first_name, $user_last_name, $user_email, $user_phone, $user_gender, $user_dob, $user_joining_date, $user_role, $hashed_password);
+            $stmt_insert = $conn->prepare("INSERT INTO users (user_first_name, user_last_name, user_email, user_phone, user_gender, user_dob, user_address, user_joining_date, user_role, password, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())");
+            $stmt_insert->bind_param("sssssssss", $user_first_name, $user_last_name, $user_email, $user_phone, $user_gender, $user_dob, $user_address, $user_joining_date, $user_role, $hashed_password);
 
             if ($stmt_insert->execute()) {
-                echo "<script>alert('Registration successful'); window.location='index.php';</script>";
+                echo "<script>alert('Registration successful'); </script>";
             } else {
                 echo "Error: " . $stmt_insert->error;
             }
@@ -46,6 +90,11 @@ if (isset($_POST['register-user'])) {
     }
 }
 ?>
+<?php
+
+?>
+
+
 <!-- Main Content -->
 <section class="section">
     <div class="section-body">
@@ -64,86 +113,68 @@ if (isset($_POST['register-user'])) {
                                 <thead>
                                     <tr>
                                         <th>Sr.#</th>
-                                        <th>District Name</th>
-                                        <th>Number of Schools</th>
-                                        <th>Incharge IT</th>
-                                        <th>Employees</th>
-                                        <th>Program Start Date</th>
-                                        <th>Budget</th>
-                                        <th>Status</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone no</th>
+                                        <th>Joining date</th>
+                                        <th>Address</th>
+                                        <th>Role</th>
+                                        <th>Details</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>Lahore</td>
-                                        <td class="align-middle">
-                                            <div class="progress progress-xs">
-                                                <div class="progress-bar bg-success width-per-80"></div>
-                                            </div>
-                                            <small>80 Schools</small>
-                                        </td>
-                                        <td>Mr. Ahmad</td>
-                                        <td>
-                                            <img alt="image" src="assets/img/users/user-1.png" width="35">
-                                            <img alt="image" src="assets/img/users/user-2.png" width="35">
-                                        </td>
-                                        <td>2021-01-15</td>
-                                        <td>$120,000</td>
-                                        <td>
-                                            <div class="badge badge-success badge-shadow">Running</div>
-                                        </td>
-                                        <td><a href="district_detail.php?id=1" class="btn btn-primary">Detail</a></td>
-                                    </tr>
 
-                                    <tr>
-                                        <td>02</td>
-                                        <td>Multan</td>
-                                        <td class="align-middle">
-                                            <div class="progress progress-xs">
-                                                <div class="progress-bar bg-warning width-per-60"></div>
-                                            </div>
-                                            <small>45 Schools</small>
-                                        </td>
-                                        <td>Engr. Bilal</td>
-                                        <td>
-                                            <img alt="image" src="assets/img/users/user-3.png" width="35">
-                                        </td>
-                                        <td>2020-07-10</td>
-                                        <td>$95,000</td>
-                                        <td>
-                                            <div class="badge badge-warning badge-shadow">In Progress</div>
-                                        </td>
-                                        <td><a href="district_detail.php?id=2" class="btn btn-primary">Detail</a></td>
-                                    </tr>
+                                    <?php
+                                    $sql = "SELECT user_id, 
+                    CONCAT(user_first_name, ' ', user_last_name) AS full_name, 
+                    user_email, user_phone, user_address, 
+                    user_joining_date, user_role, created_at 
+                    FROM users";
 
-                                    <tr>
-                                        <td>03</td>
-                                        <td>Faisalabad</td>
-                                        <td class="align-middle">
-                                            <div class="progress progress-xs">
-                                                <div class="progress-bar bg-danger width-per-30"></div>
-                                            </div>
-                                            <small>20 Schools</small>
-                                        </td>
-                                        <td>Mr. Imran</td>
-                                        <td>
-                                            <img alt="image" src="assets/img/users/user-4.png" width="35">
-                                            <img alt="image" src="assets/img/users/user-5.png" width="35">
-                                        </td>
-                                        <td>2019-05-20</td>
-                                        <td>$70,000</td>
-                                        <td>
-                                            <div class="badge badge-danger badge-shadow">Delayed</div>
-                                        </td>
-                                        <td><a href="district_detail.php?id=3" class="btn btn-primary">Detail</a></td>
-                                    </tr>
+                                    $result = $conn->query($sql);
+                                    $sr = 1; // Serial number start
+
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                    ?>
+
+                                            <tr>
+                                                <td><?php echo $sr++; ?></td>
+                                                <td><?php echo $row['full_name']; ?></td>
+                                                <td><?php echo $row['user_email']; ?></td>
+                                                <td><?php echo $row['user_phone']; ?></td>
+                                                <td><?php echo $row['user_joining_date']; ?></td>
+                                                <td><?php echo $row['user_address']; ?></td>
+                                                <td><?php echo $row['user_role']; ?></td>
+                                                <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-primary">Edit</button>
+                                                    <a href="layout.php?page=adduser&delete_id=<?php echo $row['user_id']; ?>"
+                                                        class="btn btn-danger btn-sm"
+                                                        onclick="return confirm('Are you sure?')">
+                                                        Delete
+                                                    </a>
+
+
+
+
+
+                                                </td>
+                                            </tr>
+
+                                    <?php
+                                        }
+                                    } else {
+                                        echo "<tr><td colspan='9' class='text-center'>No Users Found</td></tr>";
+                                    }
+                                    ?>
+
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -251,7 +282,7 @@ if (isset($_POST['register-user'])) {
                                                     <option value="">Select Role</option>
                                                     <option value="admin">Admin</option>
                                                     <option value="manager">Manager</option>
-                                                    <option value="computer_technician">Computer Technician</option>
+                                                    <option value="seeker">Seeker</option>
                                                 </select>
                                                 <div class="invalid-feedback">Please select role.</div>
                                             </div>
@@ -291,10 +322,13 @@ if (isset($_POST['register-user'])) {
                                 <div class="card-footer text-right">
                                     <button type="submit" name="register-user" class="btn btn-primary">Register</button>
                                 </div>
+
                             </form>
 
                         </div>
+
                     </div>
+
                 </div>
             </div>
 
