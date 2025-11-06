@@ -52,7 +52,7 @@ if (isset($_POST['login-user'])) {
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Admin Login</title>
+    <title>Login</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="assets/css/app.min.css">
@@ -75,7 +75,7 @@ if (isset($_POST['login-user'])) {
                     <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h4>Admin Login</h4>
+                                <h4>Login</h4>
                             </div>
                             <div class="card-body">
                                 <?php if (!empty($error)) : ?>
@@ -84,7 +84,7 @@ if (isset($_POST['login-user'])) {
                                     </div>
                                 <?php endif; ?>
 
-                                <form method="POST" action="#" class="needs-validation" novalidate>
+                                <form method="POST" action="#" class="needs-validation">
                                     <div class="form-group">
                                         <label for="email">Email:</label>
                                         <input id="email" type="email" class="form-control" name="user_email" tabindex="1" required autofocus>
@@ -118,6 +118,7 @@ if (isset($_POST['login-user'])) {
                                             Login
                                         </button>
                                     </div>
+                                   <div class="text-center"> <a href="user_register.php">Register</a></div>
                                 </form>
                             </div> <!-- card-body -->
                         </div> <!-- card -->
