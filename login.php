@@ -39,7 +39,7 @@ if (isset($_POST['login-user'])) {
             $error = "Email or password are incorrect";
         }
     } else {
-        $error = "Email or password are not register";
+        $error = "Email or password are not registered";
     }
 
     $stmt->close();
