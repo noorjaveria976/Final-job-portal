@@ -38,7 +38,7 @@ include('config.php');
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active"><a class="nav-link text-white" href="index.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="">Job</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="">Jobs</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#">Employers</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
