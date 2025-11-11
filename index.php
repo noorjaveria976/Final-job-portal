@@ -77,6 +77,7 @@ include('config.php');
             <option>Lahore</option>
             <option>Karachi</option>
             <option>Islamabad</option>
+            <option>Islamabad</option>
           </select>
           <button class="btn btn-primary mb-2">Search</button>
         </form>
