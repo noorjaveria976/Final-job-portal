@@ -28,7 +28,7 @@ include('config.php');
                     }
                 </script>
                 <!-- Job Header start -->
-                <div class="row">
+                <div class="row one">
                     <div class="col-lg-7">
 
 
