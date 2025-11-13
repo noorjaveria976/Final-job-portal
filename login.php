@@ -36,7 +36,7 @@ if (isset($_POST['login-user'])) {
             // header("Location: auth/admin");
             exit();
         } else {
-            $error = "Email or password are incorrected";
+            $error = "Email or password are incorrect";
         }
     } else {
         $error = "Email or password are not registered";
