@@ -10,7 +10,7 @@ include('config.php');
 <section class="section">
     <div class="section-body">
         <!-- add content here -->
-        <div class="listpgWraper main">
+        <div class="listpgWraper">
 
             <div class="container">
 
