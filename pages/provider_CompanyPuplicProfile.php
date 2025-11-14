@@ -34,7 +34,7 @@ include('config.php');
 
 
                         <div class="job-header">
-                            <div class="jobinfo for">
+                            <div class="jobinfo">
                                 <!-- Candidate Info -->
 
                                 <div class="candidateinfo">
