@@ -18,7 +18,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                 <ul class="nav nav-pills" id="myTab3" role="tablist">
                   <li class="nav-item">
                     <a class="nav-link active" id="home-tab3" data-toggle="tab" href="#home3" role="tab"
-                      aria-controls="home" aria-selected="true">Profile 1</a>
+                      aria-controls="home" aria-selected="true">Profile </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" id="profile-tab3" data-toggle="tab" href="#profile3" role="tab"
