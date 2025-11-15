@@ -12,7 +12,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
           <div class="section-body">
             <div class="card">
               <div class="card-header">
-                <h4> Resume</h4>
+                <h4>Print Resume</h4>
               </div>
               <div class="card-body">
                 <ul class="nav nav-pills" id="myTab3" role="tablist">
