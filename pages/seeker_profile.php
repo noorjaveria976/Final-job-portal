@@ -26,7 +26,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" id="contact-tab3" data-toggle="tab" href="#contact3" role="tab"
-                      aria-controls="contact" aria-selected="false">Profile </a>
+                      aria-controls="contact" aria-selected="false">Profile 4</a>
                   </li>
                 </ul>
                 <div class="tab-content" id="myTabContent2">
