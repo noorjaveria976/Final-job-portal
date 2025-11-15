@@ -45,7 +45,7 @@ include('config.php');
 
                                     </div>
 
-                                    <div class="title one">Multimedia Design</div>
+                                    <div class="title one two">Multimedia Design</div>
 
                                     <div class="desi">Manufacturing</div>
 
