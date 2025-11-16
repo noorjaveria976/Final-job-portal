@@ -172,7 +172,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                                               <?php endwhile;
                                             else: ?>
                                               <li>
-                                                <div class="skillbox text-center">No skills added yet.</div>
+                                                <div class="skillbox text-center">No skills added yet...</div>
                                               </li>
                                             <?php endif; ?>
                                           </ul>
