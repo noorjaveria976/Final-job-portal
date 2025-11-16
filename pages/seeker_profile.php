@@ -133,7 +133,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                                                 <td><?php echo $profile['industry']; ?></td>
                                               </tr>
                                               <tr>
-                                                <td><strong>Career Level main</strong></td>
+                                                <td><strong>Career Level</strong></td>
                                                 <td><?php echo $profile['career_level']; ?></td>
                                               </tr>
                                               <tr>
