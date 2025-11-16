@@ -141,7 +141,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                                                 <td><?php echo $profile['current_salary'] . " " . $profile['salary_currency']; ?></td>
                                               </tr>
                                               <tr>
-                                                <td><strong>Expected Salary</strong></td>
+                                                <td><strong>Expect Salary</strong></td>
                                                 <td><?php echo $profile['expected_salary'] . " " . $profile['salary_currency']; ?></td>
                                               </tr>
                                               <tr>
