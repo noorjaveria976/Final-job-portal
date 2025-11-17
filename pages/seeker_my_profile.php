@@ -142,7 +142,7 @@ if (!empty($_FILES['cover_image']['name'])) {
 <section class="section">
     <div class="section-body">
         <!-- add content here -->
-        <div class="userccount one">
+        <div class="userccount">
             <div class="formpanel mt0">
                 <script>
                     var elements = document.querySelectorAll('.popmessage, .bgoverlay');
