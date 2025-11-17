@@ -111,7 +111,7 @@ if (isset($_GET['id'])) {
               <table class="table custom-table">
                 <thead>
                   <tr>
-                    <th colspan="2" class="text-info">Job Details here</th>
+                    <th colspan="2" class="text-info">Job Details</th>
                   </tr>
                 </thead>
                 <tbody>
