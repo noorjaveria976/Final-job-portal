@@ -177,7 +177,7 @@ if (!empty($_FILES['cover_image']['name'])) {
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="formrow">
+                            <div class="formrow abc">
                                 <label>Password</label>
                                 <input class="form-control" id="password" name="password" type="password"
                                     value="<?= htmlspecialchars($data['password'] ?? '') ?>" placeholder="Password">
