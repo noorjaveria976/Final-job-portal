@@ -39,7 +39,7 @@ if (isset($_GET['id'])) {
         exit;
     }
 } else {
-    echo "<p class='text-danger'>No Job ID provided yet.</p>";
+    echo "<p class='text-danger'>No Job ID provided.</p>";
     exit;
 }
 ?>
