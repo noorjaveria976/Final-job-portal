@@ -139,7 +139,7 @@ if (isset($_GET['id'])) {
                                     <ul class="navbar-nav">
                                         <li class="nav-item active"><a href="#" class="nav-link">Home</a> </li>
                                         <li class="nav-item ">
-                                            <a href="" class="nav-link">Search Talent here</a>
+                                            <a href="" class="nav-link">Search Talent</a>
                                         </li>
                                         <li class="nav-item ">
                                             <a href="" class="nav-link">Companies</a>
