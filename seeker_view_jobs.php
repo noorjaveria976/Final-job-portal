@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
     $job = mysqli_fetch_assoc($result);
 
     if (!$job) {
-        echo "<p class='text-danger'>Job not found yet.</p>";
+        echo "<p class='text-danger'>Job not found.</p>";
         exit;
     }
 } else {
