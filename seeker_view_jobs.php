@@ -173,7 +173,7 @@ if (isset($_GET['id'])) {
                                                     <div class="modal-body text-center mt-3">
                                                         <a href="login.php?role=jobprovider" class="btn btn-primary btn-lg m-2">Login as Job Provider</a>
                                                         <a href="login.php?role=jobseeker" class="btn btn-success btn-lg m-2">Login as Job Seeker</a>
-                                                        <a href="login.php?role=admin" class="btn btn-dark btn-lg m-2">Login as Admin so</a>
+                                                        <a href="login.php?role=admin" class="btn btn-dark btn-lg m-2">Login as Admin</a>
                                                     </div>
                                                 </div>
                                             </div>
