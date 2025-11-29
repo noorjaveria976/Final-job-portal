@@ -189,7 +189,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                                     <?php else: ?>
                                       <tr>
                                         <td>
-                                          <p style="color:red;text-align:center;">No profile data found. Pl complete your profile.</p>
+                                          <p style="color:red;text-align:center;">No profile data found. Please complete your profile.</p>
                                         </td>
                                       </tr>
                                     <?php endif; ?>
