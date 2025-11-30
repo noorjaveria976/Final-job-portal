@@ -9,7 +9,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
 
 <section class="section">
   <div class="section-body">
-    <h3 class="text-dark text-center mb-4">My Followings</h3>
+    <h3 class="text-dark text-center mb-4">My Following</h3>
     <div class="row">
       <div class="col-lg-4">
         <div class="card card-primary">
