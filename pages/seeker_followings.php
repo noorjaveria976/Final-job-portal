@@ -71,7 +71,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                     <div class="indst fs-6">
                       Manufacturing
                     </div>
-                    <div class="emloc py-2 text-dark"><i class="fas fa-map-marker-alt"></i> Aurora</div>
+                    <div class="emloc py-2 text-dark"><i class="fas fa-map-marker-alt"></i> </div>
                   </div>
 
 
