@@ -148,7 +148,7 @@ if (isset($_GET['id'])) {
                     <td><?= htmlspecialchars($job['job_type']) ?></td>
                   </tr>
                   <tr>
-                    <th>Job Shift:</th>
+                    <th>Job Shifts:</th>
                     <td><?= htmlspecialchars($job['job_shift']) ?></td>
                   </tr>
                   <tr>
