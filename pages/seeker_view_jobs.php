@@ -183,7 +183,7 @@ if (isset($_GET['id'])) {
             <!-- Right Column -->
             <div class="col-md-8">
               <a href="layout.php?page=seeker_apply_jobs" class="btn btn-success btn-sm mb-3">
-                <i class="fas fa-arrow-left"></i> Back to Listings
+                <i class="fas fa-arrow-left"></i> Back to Listing
               </a>
 
               <div class="d-flex align-items-center mb-3">
