@@ -198,7 +198,7 @@ if (isset($_GET['id'])) {
                 </div>
               </div>
 
-              <h6 class=" text-danger border-bottom pb-1 mb-2">Job Description</h6>
+              <h6 class=" text-danger border-bottom pb-1 mb-2">Job Descriptions</h6>
               <p><?= nl2br($job['description']) ?></p>
 
               <h6 class=" text-danger border-bottom pb-1 mb-2">Benefits</h6>
