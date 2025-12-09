@@ -184,7 +184,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                                         </td>
                                       </tr>
                                       <tr>
-                                        <!-- <td height="30">&nbsp;</td> -->
+                                        <td height="30">&nbsp;</td>
                                       </tr>
                                     <?php else: ?>
                                       <tr>
