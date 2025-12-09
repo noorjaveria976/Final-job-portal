@@ -206,7 +206,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                                   <tbody>
                                     <tr>
                                       <td bgcolor="#0981c5" style="background:#0981c5;">
-                                        <h2 style="color: #fff;margin-bottom: 5px;text-align: center;font-size: 32px; padding:30px 0;">Job Seeker</h2>
+                                        <!-- <h2 style="color: #fff;margin-bottom: 5px;text-align: center;font-size: 32px; padding:30px 0;">Job Seeker</h2> -->
                                       </td>
                                     </tr>
 
