@@ -30,7 +30,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                       <div class="user-name d-flex justify-content-between">
                         <div class="author pe-5 text-dark"> <span>Multimedia Design</span>
                         </div>
-                        <!-- <div class="count-messages" style="color: blue;"> -->
+                        <div class="count-messages" style="color: blue;">
                           0
                         </div>
                       </div>
