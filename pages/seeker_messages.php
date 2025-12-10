@@ -15,7 +15,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
           <div class="body">
             <div id="plist" class="people-list">
               <div class="chat-search">
-                <!-- <input type="text" class="form-control" placeholder="Search..." /> -->
+                <input type="text" class="form-control" placeholder="Search..." />
               </div>
               <!-- new -->
               <ul class="message-history list-unstyled">
