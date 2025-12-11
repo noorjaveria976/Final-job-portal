@@ -75,7 +75,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                   </div>
 
 
-                  <div class=" bg-light w-50 mx-auto py-1 border rounded px-2"><span><i class="fas fa-briefcase"></i> 6 Open Jobs</span></div>
+                  <!-- <div class=" bg-light w-50 mx-auto py-1 border rounded px-2"><span><i class="fas fa-briefcase"></i> 6 Open Jobs</span></div> -->
                 </div>
               </a>
             </div>
