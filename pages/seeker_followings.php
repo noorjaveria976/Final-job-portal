@@ -65,7 +65,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
             <div class="empint">
               <a href="" title="Multimedia Design" class="text-dark text-decoration-none">
                 <div class="emptbox d-block text-center">
-                  <!-- <div class="w-25 mx-auto border rounded mb-2"><img src="assets/img/wave-media-1536855186-701.jpg" alt="Multimedia Design" title="Multimedia Design" class="img-fluid"></div> -->
+                  <div class="w-25 mx-auto border rounded mb-2"><img src="assets/img/wave-media-1536855186-701.jpg" alt="Multimedia Design" title="Multimedia Design" class="img-fluid"></div>
                   <div class="text-info-right">
                     <h4>Wave Media </h4>
                     <div class="indst fs-6">
