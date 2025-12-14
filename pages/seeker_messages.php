@@ -24,7 +24,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
                     <div class="d-flex py-2 align-items-center">
                       <div class="jobcompany px-4">
 
-                        <a href="" class="d-block flex-shrink-0" title="Multimedia Design"><img src="https://www.sharjeelanjum.com/demos/jobsportal-update/company_logos/multimedia-design-1614272292-782.jpg" alt="Multimedia Design" title="Multimedia Design" style=" border-radius: 50%; width: 40px; height: 40px; object-fit: contain; border: 2px solid #ffffff;"> </a>
+                        <!-- <a href="" class="d-block flex-shrink-0" title="Multimedia Design"><img src="https://www.sharjeelanjum.com/demos/jobsportal-update/company_logos/multimedia-design-1614272292-782.jpg" alt="Multimedia Design" title="Multimedia Design" style=" border-radius: 50%; width: 40px; height: 40px; object-fit: contain; border: 2px solid #ffffff;"> </a> -->
                       </div>
 
                       <div class="user-name d-flex justify-content-between">
