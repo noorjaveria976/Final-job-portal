@@ -13,7 +13,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
         <div class="card">
           <div class="body">
-            <div id="plist" class="people-list">
+            <!-- <div id="plist" class="people-list"> -->
               <div class="chat-search">
                 <input type="text" class="form-control" placeholder="Search..." />
               </div>
