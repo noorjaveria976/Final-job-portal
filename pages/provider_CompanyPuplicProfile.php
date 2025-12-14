@@ -47,7 +47,7 @@ include('config.php');
 
                                     <div class="title">Multimedia Design</div>
 
-                                    <div class="desi">Manufacturing</div>
+                                    <div class="design">Manufacturing</div>
 
                                     <div class="loctext"><i class="fa fa-history"
                                             aria-hidden="true"></i>
