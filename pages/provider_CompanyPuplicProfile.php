@@ -37,7 +37,7 @@ include('config.php');
                             <div class="jobinfo">
                                 <!-- Candidate Info -->
 
-                                <!-- <div class="candidateinfo"> -->
+                                <div class="candidateinfo">
 
                                     <div class="userPic"><a href="#"><img
                                                 src="assets/img/image-gallery/companyLogo.png"
