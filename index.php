@@ -30,7 +30,7 @@ include('config.php');
          border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
     <div class="container">
       <a class="navbar-brand" href="index.php">
-        <img src="assets/img/pledges_logo-removebg-preview.png" alt="logo" style="height:40px;">
+        <img src="assets/img/logo.png" alt="" style="height:40px;">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon">X</span>
@@ -77,8 +77,6 @@ include('config.php');
             <option>Lahore</option>
             <option>Karachi</option>
             <option>Islamabad</option>
-            <option>Bahawalpur</option>
-            <!-- <option>Bahawalnagar</option> -->
           </select>
           <button class="btn btn-primary mb-2">Search</button>
         </form>

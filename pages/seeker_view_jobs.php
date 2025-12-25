@@ -207,7 +207,7 @@ if (isset($_GET['id'])) {
               <h6 class=" text-danger mt-3 border-bottom pb-1 mb-2">Degree Level</h6>
               <span class="bg-info text-white px-2 py-1 rounded d-inline-block me-1 mb-1"><?= $job['degree_level'] ?></span>
 
-              <div class="mt-4">
+              <!-- <div class="mt-4">
                 <?php if (!empty($msg)) echo $msg; ?>
 
                 <?php if ($job['external_job'] == 1 && !empty($job['job_link'])): ?>
@@ -221,7 +221,7 @@ if (isset($_GET['id'])) {
                     </button>
                   </form>
                 <?php endif; ?>
-              </div>
+              </div> -->
 
 
             </div>

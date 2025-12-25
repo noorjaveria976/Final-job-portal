@@ -15,7 +15,7 @@ if (isset($_GET['delete_id'])) {
     $id = intval($_GET['delete_id']);
 
     // Check if user exists
-    $check = $conn->query("SELECT user_role FROM users WHERE user_id = $id");
+    $check = $conn->query("SELECT user_role FROM users WHERE user_id = $user_id");
     if ($check->num_rows == 0) {
         echo "<script>alert('User not found!'); window.history.back();</script>";
         exit;
@@ -35,7 +35,7 @@ if (isset($_GET['delete_id'])) {
     }
 
     // Delete user
-    $delete = $conn->query("DELETE FROM users WHERE user_id = $id");
+    $delete = $conn->query("DELETE FROM users WHERE user_id = $user_id");
 
     if ($delete) {
         echo "<script>alert('User deleted successfully'); window.location='layout.php?page=adduser';</script>";
@@ -76,8 +76,24 @@ if (isset($_POST['register-user'])) {
             echo "<script>alert('Email already registered');</script>";
         } else {
             // Insert new user
-            $stmt_insert = $conn->prepare("INSERT INTO users (user_first_name, user_last_name, user_email, user_phone, user_gender, user_dob, user_address, user_joining_date, user_role, password, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())");
-            $stmt_insert->bind_param("sssssssss", $user_first_name, $user_last_name, $user_email, $user_phone, $user_gender, $user_dob, $user_address, $user_joining_date, $user_role, $hashed_password);
+            $stmt_insert = $conn->prepare("INSERT INTO users 
+(user_first_name, user_last_name, user_email, user_phone, user_gender, user_dob, user_address, user_joining_date, user_role, password, created_at) 
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())");
+
+            $stmt_insert->bind_param(
+                "ssssssssss",
+                $user_first_name,
+                $user_last_name,
+                $user_email,
+                $user_phone,
+                $user_gender,
+                $user_dob,
+                $user_address,
+                $user_joining_date,
+                $user_role,
+                $hashed_password
+            );
+
 
             if ($stmt_insert->execute()) {
                 echo "<script>alert('Registration successful'); </script>";
@@ -100,8 +116,8 @@ if (isset($_POST['register-user'])) {
     <div class="section-body">
         <div class="row">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-header justify-content-between">
+                <div>
+                    <div class="card-header d-flex justify-content-between">
                         <h4>Employee Detials</h4>
                         <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#registerUserModal">
                             Register User
@@ -133,7 +149,7 @@ if (isset($_POST['register-user'])) {
                     FROM users";
 
                                     $result = $conn->query($sql);
-                                    $sr = 1; // Serial number start
+                                    $sr= 1; // Serial number start
 
                                     if ($result->num_rows > 0) {
                                         while ($row = $result->fetch_assoc()) {
@@ -281,8 +297,9 @@ if (isset($_POST['register-user'])) {
                                                 <select name="user_role" class="form-control" required>
                                                     <option value="">Select Role</option>
                                                     <option value="admin">Admin</option>
-                                                    <option value="manager">Manager</option>
-                                                    <option value="seeker">Seeker</option>
+                                                    <option value="HR">HR</option>
+                                                    <option value="Assistant HR">Assistant HR</option>
+
                                                 </select>
                                                 <div class="invalid-feedback">Please select role.</div>
                                             </div>

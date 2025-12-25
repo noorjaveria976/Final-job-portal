@@ -3,6 +3,9 @@
 <?php
 include('config.php');
 
+//  <div class="table-responsive">
+// <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
+
 
 if (isset($_POST['register-user'])) {
     $user_first_name = trim($_POST['user_first_name']);

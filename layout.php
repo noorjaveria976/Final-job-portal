@@ -7,7 +7,7 @@ $page = basename($page);
 $file = "pages/{$page}.php";
 
 // Default title
-$pageTitle = "ITSM";
+$pageTitle = "TEF";
 
 // ✅ Agar page exist karta hai to usko ek dafa include karo, sirf title nikalne ke liye
 if (file_exists($file)) {
@@ -17,10 +17,10 @@ if (file_exists($file)) {
     $pageContent = ob_get_clean();
 
     // Agar page ne $pageTitle set kiya hai to wahi use karo
-    if (isset($pageTitle) && $pageTitle !== "ITSM") {
+    if (isset($pageTitle) && $pageTitle !== "TEF") {
         $finalTitle = $pageTitle;
     } else {
-        $finalTitle = "ITSM";
+        $finalTitle = "TEF";
     }
 } else {
     $finalTitle = "404 - Page Not Found";
@@ -34,7 +34,7 @@ if (file_exists($file)) {
 
 <head>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title><?php echo $finalTitle; ?> | ITSM</title>
+    <title><?php echo $finalTitle; ?> | TEF</title>
     <?php include_once('include/html-sources.html'); ?>
 </head>
 
@@ -51,6 +51,7 @@ if (file_exists($file)) {
             <?php include_once('include/sidebar.php'); ?>
 
             <!-- Main Content -->
+             <!-- pages show there according to path -->
             <div class="main-content">
                 <?php echo $pageContent; ?>
                 <?php include_once('include/settingSidebar.php'); ?>

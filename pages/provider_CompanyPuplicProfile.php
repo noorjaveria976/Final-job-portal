@@ -1,4 +1,4 @@
-<?php $pageTitle = "Public Profile "; ?>
+<?php $pageTitle = "Edit Account "; ?>
 
 <?php
 include('config.php');
@@ -10,7 +10,7 @@ include('config.php');
 <section class="section">
     <div class="section-body">
         <!-- add content here -->
-        <div class="listpgWraper">
+        <div class="listpgWraper ">
 
             <div class="container">
 
@@ -47,7 +47,7 @@ include('config.php');
 
                                     <div class="title">Multimedia Design</div>
 
-                                    <div class="design">Manufacturing</div>
+                                    <div class="desi">Manufacturing</div>
 
                                     <div class="loctext"><i class="fa fa-history"
                                             aria-hidden="true"></i>
