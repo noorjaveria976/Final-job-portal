@@ -61,7 +61,7 @@ include('config.php');
     <!-- Dark Overlay for readability -->
     <div style="background: rgb(0 0 0 / 10%);; padding:40px 0;">
       <div class="container text-center text-white">
-        <!-- <h1 class="mb-4 ">Find Your Dream Job</h1> -->
+        <h1 class="mb-4 ">Find Your Dream Job</h1>
         <p class="mb-5">Search jobs by category, location, or keywords.</p>
         <form class="form-inline justify-content-center">
           <input type="text" class="form-control mr-2 mb-2" placeholder="Keyword (e.g. Developer)">
