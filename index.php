@@ -70,7 +70,7 @@ include('config.php');
             <option>IT / Software</option>
             <option>Education</option>
             <option>Government</option>
-            <option>Engineering</option>
+            <!-- <option>Engineering</option> -->
           </select>
           <select class="form-control mr-2 mb-2">
             <option>All Locations</option>
