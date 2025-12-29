@@ -73,7 +73,7 @@ include('config.php');
             <option>Engineering</option>
           </select>
           <select class="form-control mr-2 mb-2">
-            <!-- <option>All Locations</option> -->
+            <option>All Locations</option>
             <option>Lahore</option>
             <option>Karachi</option>
             <option>Islamabad</option>
