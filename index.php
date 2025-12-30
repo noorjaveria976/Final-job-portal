@@ -69,7 +69,7 @@ include('config.php');
             <option>All Categories</option>
             <option>IT / Software</option>
             <option>Education</option>
-            <!-- <option>Government</option> -->
+            <option>Government</option>
             <option>Engineering</option>
           </select>
           <select class="form-control mr-2 mb-2">
